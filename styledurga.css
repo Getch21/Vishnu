@@ -362,14 +362,17 @@ header ul li a:hover {
     header {
         position: relative;
         width: 100%;
-        height: 40vh;
-        background: linear-gradient(to bottom, rgb(235, 0, 157), rgb(255, 255, 255));
+        height: 30vh;
+        background: linear-gradient(to bottom, rgba(235, 0, 157, 0.767) 30%, rgba(255, 255, 255, 0.283) 70%); 
         display: flex;
         /* display: none; */
         align-items: center;
         justify-content: space-between;
         animation: slide_top 1s linear forwards;
 
+    }
+        .himg{                
+        margin-left: -100px;       
     }
 
     .logo {
@@ -387,11 +390,15 @@ header ul li a:hover {
     }
 
     .nav.active {
-        position: fixed;
+       /* position: fixed; */
+        position: absolute; 
         top: 0;
         left: 0;
         width: 100%;
-        height: 25vh;
+        height: 30vh;    
+        margin-top: -10px;   
+        padding: 40px 0 100px 0;    
+        background: rgb(235, 0, 157); 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -465,6 +472,7 @@ header ul li a:hover {
     .img {
         opacity: 1;
         right: 0;
+        width:400px;
     }
 
    
@@ -479,8 +487,10 @@ header ul li a:hover {
     }
 
     .massage {
-        /* left: -25px; */
-        top: 35%;
+        position:absolute ; 
+        text-align: center;
+        box-shadow: none;      
+        top: 30%;   
         width: 90%;
 
 
@@ -517,6 +527,7 @@ header ul li a:hover {
     .img {
         transition: .5s;
         opacity: 0.4;
+        width:300px;
     }
 
 }
