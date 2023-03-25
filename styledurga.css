@@ -121,7 +121,8 @@ header ul li a:hover {
 }
 
 .bgcont {
-    background: url("images/durgap.png");
+
+    background: url("/images/durgap.png");
     background-repeat: no-repeat;
     filter: opacity(10%);
     width: 100%;
