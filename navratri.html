@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styledurga.css">
+    <title>| Nvratri</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <img class="himg" src="img/durgap.png" alt="">
+
+        <a href="#" class="logo">Vb.</a>
+        <div class="toggle"></div>
+        <ul class="nav">
+            <br>
+            <br>
+            <li><a href="#" style="--i:1;" class="home">Home</a></li>
+            <li><a href="#" style="--i:1.5;">About&nbsp;Us</a></li>
+            <li><a href="#" style="--i:2;">Calendar</a></li>
+            <li><a href="#" style="--i:2.5;">Blog</a></li>
+            <li><a href="#" style="--i:3;">Contact</a></li>
+            <ul class="links">
+                <li><a href="#" style="--i:14;"><img src="img/youtube.svg" alt=""></a></li>
+                <li><a href="#" style="--i:13;"><img src="img/twitter.svg" alt=""></a></li>
+                <li><a href="#" style="--i:12;"><img src="img/instagram.svg" alt=""></a></li>
+            </ul>
+        </ul>
+
+
+    </header>
+
+    <section>
+
+        <img src="img/garba2.png" id="thirdimg" class="img ">
+        <div class="content">
+            <div class="bgcont">
+
+            </div>
+            <div class="bgcont2">
+                <img src="img/garba.png" id="secondimg">
+
+            </div>
+            <div class="massage">
+
+                <h1>Happy Navratri</h1>
+                <p>Navratri celebrates the victory of Good over Evil. This 9 days long festivity is dedicated to 9
+                    divine forms of Maa Durga, known as NavaDurga.<br>
+                    <span class="span">
+                    </span>
+                </p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        const togglebtn = document.querySelector('.toggle');
+        const navigation = document.querySelector('.nav');
+
+        togglebtn.onclick = function () {
+            togglebtn.classList.toggle('active')
+            navigation.classList.toggle('active')
+
+        }
+
+        /////////////////////////////////////////////////////////////////////
+        window.onload = () => {
+
+            let text = document.getElementsByClassName("span")[0];
+
+            vkush(text,
+                "May this Navratri Fill Your life with the colors Of Happiness and Prosperity.\n Wishing you all and Your Family A very Happy Navratri."
+                );
+
+        };
+
+        function vkush(target, msg) {
+            let i = 0,
+                id = setInterval(() => {
+
+                    target.append(msg[i++]);
+                    if (i >= msg.length) {
+                        clearInterval(id);
+                    }
+                }, 50);
+        }
+
+        /////////////////////////////////////////////////////////////////////
+    </script>
+</body>
+
+</html>
