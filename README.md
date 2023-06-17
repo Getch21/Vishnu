@@ -1,13 +1,1 @@
-https://getch21.github.io/First/
-
-
-- 👋 Hi, I’m @Getch21 
-- 👀 I’m interested in Web Designing and Development...
-- 🌱 I’m currently learning Somthing...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-
-<!---
-Getch21/Getch21 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+https://getch21.github.io/codeforfun/
