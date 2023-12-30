@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+*{
+    font-family: 'Happy Monkey', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F8C8DC;
+    user-select: none;
+    
+   
+}
+
+.header_text {
+    /* font-family: 'Nunito'; */
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    cursor: none;
+}
+.sub_header{
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    cursor: none;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif_container img{
+    cursor: none;
+
+}
