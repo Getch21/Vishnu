@@ -15,10 +15,10 @@
     <title>🐿</title>
 </head>
 <body>
-    <div class="flex items-center justify-center md:hidden">
+    <div class="flex items-center justify-center sm:hidden">
         <h1 class="header_text">Please open in laptop!</h1>
     </div>
-    <div class="hidden md:block">
+    <div class="hidden sm:block">
         <div >
             <h1 class = "header_text">Happiest Birthday to You baby!</h1>
             <h5 class = "sub_header ">take it this is for you!</h5>
@@ -27,6 +27,7 @@
         <div class="gif_container">
             <img src="/codeforfun/images/v1.gif" alt="Cute animated illustration">
         </div>
+       
         <div class = "buttons">
             <button class="btn" id = "yesButton" onclick="nextPage()">Okey</button>
             <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
@@ -47,5 +48,35 @@
    
 </body> 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    $(document).keydown(function (event) {
+        if (event.keyCode == 123) { // Prevent F12
+            return false;
+        } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+            return false;
+        }
+    });
+
+    $(document).on("contextmenu", function (e) {        
+        e.preventDefault();
+    });
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+       
+        function play() {
+            //var audio = new Audio('https://dl.dropbox.com/s/c6aq63o2mwuvkui/Happy-Birthday-to-you-Singing-Bell.mp3');
+            var audio = new Audio('/codeforfun/assets/Ye-Chori-Badi Drama-Queen-Hai.mp3');
+            audio.play();
+        }
+
+        play();
+       
+        //window.addEventListener("mouseover", play);
+        window.addEventListener("click", play);
+    });
+</script>
 
 </html>

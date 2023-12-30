@@ -36,12 +36,16 @@ body {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 0px;
+    user-select: none;
+    cursor: pointer;
 }
 .sub_header{
     font-size: 30px;
     font-weight: bold;
     color: white;
     text-align: center;
+    user-select: none;
+    cursor: pointer;
 }
 
 .buttons {
@@ -74,6 +78,7 @@ body {
 }
 .gif_container img{
     height: 70vh;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 320px) and (max-height: 568px) {
@@ -111,5 +116,29 @@ body {
     .btn {
         padding: 15px 25px;
         font-size: 14px;
+    }
+}
+.header_text {
+    background: linear-gradient(
+        to right,
+        #7953cd 20%,
+        #00affa 30%,
+        #0190cd 70%,
+        #764ada 80%
+    );
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: gradient 5s ease-in-out infinite alternate;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
     }
 }

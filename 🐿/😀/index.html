@@ -39,15 +39,18 @@
             text-align: center;
             margin-top: 20px;
             margin-bottom: 0px;
-            cursor: none;
+            cursor: pointer;
+            user-select: none;
         }
         .sub_header{
-            font-size: 20px;
+            font-size: 30px;
             font-weight: lighter;
             color: white;
             text-align: center;
             margin-bottom: 0px;
-            cursor: none;
+            line-height: 35px;
+            cursor: pointer;
+            user-select: none;
         }
 
         .gif_container {
@@ -60,6 +63,30 @@
             cursor: none;
 
         }
+        span {
+            background: linear-gradient(
+                to right,
+                #7953cd 20%,
+                #00affa 30%,
+                #0190cd 70%,
+                #764ada 80%
+            );
+            
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            background-size: 500% auto;
+            animation: gradient 5s ease-in-out infinite alternate;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -67,11 +94,42 @@
         <div class="container">
             <div >
                 <h1 class = "header_text">Yeeeyyyy 🥳🥳</h1>
-                <h2 class = "sub_header">Fir se Happy Birthday</h2>
+                <h2 class = "sub_header"><span>You</span> always bring a <span>sweet smile</span> to my face<br><q>I hope <span>every dream</span> of yours come <span>true</span>.</q></h2>
             </div>
             <div class="gif_container">
                 <img src="/codeforfun/images/v2.gif" alt="Cute animated illustration">
             </div>
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) { // Prevent F12
+                return false;
+            } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+                return false;
+            }
+        });
+
+        $(document).on("contextmenu", function (e) {        
+            e.preventDefault();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+           
+            function play() {
+                //var audio = new Audio('https://dl.dropbox.com/s/c6aq63o2mwuvkui/Happy-Birthday-to-you-Singing-Bell.mp3');
+                var audio = new Audio('/codeforfun/assets/veer.mp3');
+                audio.play();
+            }
+    
+            play();
+           
+            //window.addEventListener("mouseover", play);
+            window.addEventListener("click", play);
+            
+        });
+    </script>
 </html>
