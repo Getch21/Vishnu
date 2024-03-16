@@ -26,15 +26,19 @@
 </head>
 
 <body class="max-h-screen max-w-screen select-none kcursor-[url(pich.png),pointer] overflow-hidden">
-    <video id="video-background" class=" z-[-1] top-0 left-0 blur-lg fixed w-auto h-auto min-w-screen min-h-screen"
+    <video id="video-background" class="invisible md:visible z-[-1] top-0 left-0 blur-lg fixed w-auto h-auto min-w-screen min-h-screen"
         autoplay loop muted>
-        <source src="holi.mp4" type="video/mp4">
+        <source src="holi169.mp4" type="video/mp4">
+    </video>
+    <video id="video-background" class="visible md:invisible z-[-1] top-0 left-0 blur-lg fixed w-auto h-auto min-w-screen min-h-screen"
+        autoplay loop muted>
+        <source src="holi916.mp4" type="video/mp4">
     </video>
 
 
-    <section class="flex justify-center items-center max-h-screen max-w-screen h-screen w-screen">
-        <div class="flex justify-center items-center w-96 h-96 rounded-full ">
-            <img id="holi" class="rounded-full contrast-125" src="/holi.svg" alt="">
+    <section class="flex justify-center items-center max-h-screen max-w-screen h-screen w-screen group">
+        <div class="flex justify-center items-center w-full h-full">
+            <img id="holi" class=" contrast-125 md:w-auto md:h-96 " src="./holi.png" alt="">
         </div>
     </section>
 </body>
@@ -46,8 +50,9 @@
         video.removeAttribute('controls');
 
 
-        $(document).on('mousemove', function (e) {
-            var section = $('section');
+        // $(document).on('click', function (e) {
+        $(document).on('mousemove touchmove', function (e) {
+            var section = $('section , img');
             var color = $(
                 '<span><svg xmlns="http://www.w3.org/2000/svg" id="splash" class="svg-box" fill="' +
                 getRandomColor() +
