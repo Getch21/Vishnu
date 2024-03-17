@@ -97,7 +97,7 @@
 
 
         // $(document).on('mousemove', function (e) {
-            $(document).on('mousemove touchmove', function (e) {
+            $(document).on('mousemove touchmove touchstart touchend', function (e) {
             var section = $('section , img');
             var color = $(
                 '<span><svg xmlns="http://www.w3.org/2000/svg" id="splash" class="svg-box" fill="' +
